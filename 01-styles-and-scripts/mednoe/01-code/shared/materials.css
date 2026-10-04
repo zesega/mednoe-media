@@ -1,0 +1,115 @@
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:300 400;font-display:swap;src:url(../../02-content/fonts/bs98-fraunces-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:300 400;font-display:swap;src:url(../../02-content/fonts/bs98-fraunces-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:300;font-display:swap;src:url(../../02-content/fonts/bs98-fraunces-italic-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:300;font-display:swap;src:url(../../02-content/fonts/bs98-fraunces-italic-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:300 600;font-display:swap;src:url(../../02-content/fonts/bs98-hanken-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:300 600;font-display:swap;src:url(../../02-content/fonts/bs98-hanken-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+html#bs98-tilda{--paper:#f4efe6;--ink:#1b231d;--forest:#2c4133;--forest-deep:#1f2f25;--brass:#b5853f;--brass-deep:#8a5e2e;--snow:#f6f2ea;--mist:#c7cdc4;--line:rgba(246,242,234,.22);--ease:cubic-bezier(.19,1,.22,1);color-scheme:only light}
+html#bs98-tilda *{box-sizing:border-box;margin:0;padding:0}
+html#bs98-tilda{scroll-behavior:smooth}
+html#bs98-tilda body{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:clamp(20px,4vh,44px) 22px;position:relative;
+    background:var(--forest-deep);color:var(--snow);font-family:"Hanken Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;text-align:center}
+html#bs98-tilda .bg{position:fixed;inset:0;z-index:0;overflow:hidden}
+html#bs98-tilda .bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+html#bs98-tilda video:not(#film)::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+html#bs98-tilda .bg .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,24,19,.52) 0%,rgba(18,24,19,.66) 45%,rgba(18,24,19,.85) 100%)}
+html#bs98-tilda .lang{position:fixed;top:18px;right:18px;z-index:5;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--snow);background:rgba(18,24,19,.45);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer;transition:border-color .3s var(--ease),color .3s var(--ease)}
+html#bs98-tilda .lang:hover{border-color:var(--brass);color:var(--brass)}
+html#bs98-tilda .wrap{position:relative;z-index:1;width:100%;max-width:560px;animation:rise 1s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+html#bs98-tilda .mk{width:46px;height:46px;display:block;margin:0 auto 14px}
+html#bs98-tilda .mk path{stroke:var(--snow);fill:none;stroke-linejoin:round;stroke-linecap:round}
+html#bs98-tilda .wordmark{font-family:"Fraunces",Georgia,serif;font-weight:400;font-size:1.35rem;letter-spacing:.05em;color:var(--snow);display:block}
+html#bs98-tilda .wordmark .vl{color:var(--brass)}
+html#bs98-tilda .eyebrow{font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:#d4a868;margin:24px 0 12px;display:block;font-weight:600}
+html#bs98-tilda h1{font-family:"Fraunces",Georgia,serif;font-weight:300;font-size:clamp(1.9rem,5.6vw,2.9rem);line-height:1.08;letter-spacing:-.01em;color:var(--snow)}
+html#bs98-tilda h1 em{font-style:italic;color:var(--brass);white-space:nowrap}
+html#bs98-tilda .sub{color:var(--mist);font-size:.99rem;margin:16px auto 0;max-width:44ch}
+html#bs98-tilda .figs{margin:22px auto 0;font-family:"Fraunces",Georgia,serif;font-weight:400;font-size:clamp(1rem,2.4vw,1.1rem);line-height:1.55;letter-spacing:.01em;color:var(--snow);font-variant-numeric:lining-nums}
+html#bs98-tilda .figs::before{content:"";display:block;width:34px;height:1px;margin:0 auto 16px;background:var(--brass);opacity:.75}
+html#bs98-tilda .figs .f{white-space:nowrap}
+html#bs98-tilda .figs .d{color:#d4a868;padding:0 .2em}
+@media(max-width:540px){html#bs98-tilda .figs .br .d{display:none}
+html#bs98-tilda .figs .br::after{content:"\A";white-space:pre}
+}
+html#bs98-tilda .inside{margin:10px auto 0;max-width:58ch;font-size:.86rem;line-height:1.6;color:rgba(246,242,234,.8);text-wrap:balance}
+html#bs98-tilda .nw{white-space:nowrap}
+html#bs98-tilda .inside b{font-weight:600;color:var(--snow)}
+html#bs98-tilda .paths{margin-top:30px;display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+html#bs98-tilda .btn{font:inherit;font-weight:600;font-size:.93rem;letter-spacing:.04em;padding:15px 26px;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:background-color .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease),transform .16s var(--ease)}
+html#bs98-tilda .btn-brass{border:1px solid transparent;background:var(--brass);color:#241808}
+html#bs98-tilda .btn-ghost{background:rgba(18,24,19,.35);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);border:1px solid var(--line);color:var(--snow)}
+@media(hover:hover) and (pointer:fine){html#bs98-tilda .btn-brass:hover{background:#c79a55;transform:translateY(-1px)}
+html#bs98-tilda .btn-ghost:hover{border-color:var(--brass);color:var(--brass)}
+}
+html#bs98-tilda .btn:active{transform:scale(.97)}
+@media(max-width:430px){html#bs98-tilda .paths{flex-direction:column}
+html#bs98-tilda .btn{width:100%}
+}
+@media(max-width:600px){html#bs98-tilda body{padding-top:72px}
+}
+html#bs98-tilda .hint{margin:14px auto 0;max-width:60ch;font-size:.8rem;color:rgba(246,242,234,.78);text-wrap:balance}
+html#bs98-tilda :where(a,button,summary,[tabindex]):focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+html#bs98-tilda .req{max-height:0;overflow:hidden;opacity:0;visibility:hidden;text-align:left;transition:max-height .8s var(--ease),opacity .6s var(--ease),margin-top .8s var(--ease),visibility 0s linear .8s}
+html#bs98-tilda .req.open{max-height:1200px;opacity:1;margin-top:26px;visibility:visible;transition-delay:0s}
+html#bs98-tilda .card{background:rgba(18,24,19,.55);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3.4vw,30px)}
+html#bs98-tilda .card h2{font-family:"Fraunces",serif;font-weight:300;font-size:1.25rem;color:var(--snow);margin-bottom:4px}
+html#bs98-tilda .card .note{font-size:.84rem;color:var(--mist);margin-bottom:16px}
+html#bs98-tilda .frow{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:11px}
+@media(max-width:520px){html#bs98-tilda .frow{grid-template-columns:1fr}
+}
+html#bs98-tilda .field{display:flex;flex-direction:column;gap:5px}
+html#bs98-tilda .field label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mist)}
+html#bs98-tilda .field .req-star{color:var(--brass)}
+html#bs98-tilda .field input,html#bs98-tilda .field textarea{font:inherit;font-size:max(16px,.95rem);padding:12px 13px;border-radius:9px;border:1px solid rgba(246,242,234,.45);background:rgba(18,24,19,.5);color:var(--snow);transition:border-color .25s var(--ease)}
+html#bs98-tilda .field textarea{min-height:84px;resize:vertical}
+html#bs98-tilda .field input:focus,html#bs98-tilda .field textarea:focus{outline:none;border-color:var(--brass)}
+html#bs98-tilda .field input:focus-visible,html#bs98-tilda .field textarea:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+html#bs98-tilda .check{display:flex;gap:9px;align-items:flex-start;font-size:.8rem;color:var(--mist);margin:13px 0 16px;text-align:left}
+html#bs98-tilda .check input{margin-top:3px;accent-color:var(--brass)}
+html#bs98-tilda .check a{color:#d4a868;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(212,168,104,.55)}
+html#bs98-tilda .check a:hover{text-decoration-color:currentColor}
+html#bs98-tilda .hp{position:absolute;left:-5000px;opacity:0;height:0;width:0}
+html#bs98-tilda .send{width:100%;border:0;background:var(--brass);color:#241808;font:inherit;font-weight:600;font-size:.95rem;letter-spacing:.04em;padding:15px;border-radius:10px;cursor:pointer;transition:background-color .25s var(--ease),transform .16s var(--ease),opacity .25s var(--ease)}
+@media(hover:hover) and (pointer:fine){html#bs98-tilda .send:hover{background:#c79a55;transform:translateY(-1px)}
+}
+html#bs98-tilda .send:active{transform:scale(.985)}
+html#bs98-tilda .send:disabled{opacity:.6;cursor:default;transform:none}
+html#bs98-tilda .eta{margin-top:11px;font-size:.8rem;color:rgba(246,242,234,.78);text-align:center}
+html#bs98-tilda .status{margin-top:12px;font-size:.88rem;color:#d9e6d9;min-height:1.2em;display:none}
+html#bs98-tilda .status.show{display:block}
+html#bs98-tilda .sent{text-align:center;animation:sentIn .6s var(--ease) both}
+html#bs98-tilda .sent:focus{outline:none}
+html#bs98-tilda .sent-mark{width:40px;height:40px;display:block;margin:2px auto 14px;fill:none;stroke:#d4a868;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+html#bs98-tilda .sent-mark circle{opacity:.55}
+html#bs98-tilda .sent-mark path{stroke-dasharray:1;stroke-dashoffset:1;animation:sentDraw .55s var(--ease) .18s forwards}
+html#bs98-tilda .sent-lead{font-family:"Fraunces",Georgia,serif;font-weight:300;font-size:1.25rem;line-height:1.3;color:var(--snow);text-wrap:balance}
+html#bs98-tilda .sent-body{margin:8px auto 0;max-width:40ch;font-size:.9rem;color:var(--mist);text-wrap:balance}
+html#bs98-tilda .sent-body .nw{color:var(--snow)}
+@keyframes sentIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes sentFade{from{opacity:0}to{opacity:1}}
+@keyframes sentDraw{to{stroke-dashoffset:0}}
+html#bs98-tilda .foot{margin-top:30px;font-size:.79rem;color:rgba(246,242,234,.6)}
+html#bs98-tilda .foot a{color:#d4a868;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(212,168,104,.55);transition:color .25s var(--ease),text-decoration-color .25s var(--ease)}
+html#bs98-tilda .foot a:hover{text-decoration-color:currentColor}
+html#bs98-tilda .foot a.back{display:inline-block;margin-top:8px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,242,234,.8);text-decoration:none}
+html#bs98-tilda .foot a.back:hover{color:#d4a868}
+@media(prefers-reduced-motion:reduce){html#bs98-tilda{scroll-behavior:auto}
+html#bs98-tilda .wrap{animation:none}
+html#bs98-tilda .req{transition:none}
+html#bs98-tilda .sent{animation:sentFade .3s ease both}
+html#bs98-tilda .sent-mark path{animation:none;stroke-dashoffset:0}
+}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:300;font-display:swap;src:url(../../02-content/fonts/bs98-display-300.woff2) format("woff2");unicode-range:U+0400-052F}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:400;font-display:swap;src:url(../../02-content/fonts/bs98-display-400.woff2) format("woff2");unicode-range:U+0400-052F}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:500;font-display:swap;src:url(../../02-content/fonts/bs98-display-500.woff2) format("woff2");unicode-range:U+0400-052F}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:300;font-display:swap;src:url(../../02-content/fonts/bs98-display-italic-300.woff2) format("woff2");unicode-range:U+0400-052F}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:400;font-display:swap;src:url(../../02-content/fonts/bs98-display-italic-400.woff2) format("woff2");unicode-range:U+0400-052F}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:500;font-display:swap;src:url(../../02-content/fonts/bs98-display-italic-500.woff2) format("woff2");unicode-range:U+0400-052F}
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:200 800;font-display:swap;src:url(../../02-content/fonts/bs98-manrope-variable.woff2) format("woff2");unicode-range:U+0400-052F}
+
+
+html#bs98-tilda #allrecords{font:inherit;color:inherit;background:transparent;}
+html#bs98-tilda .bs98-block{width:100%;margin:0;padding:0;}
+html#bs98-tilda #allrecords .t123,html#bs98-tilda #allrecords .t123__centeredContainer,html#bs98-tilda #allrecords .t123__width{max-width:none;width:100%;margin:0;padding:0;}
+html#bs98-tilda .bs98-error{padding:16px;background:#fff3d6;color:#532e00;font:16px/1.5 system-ui;}

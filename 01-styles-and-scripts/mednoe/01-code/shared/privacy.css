@@ -1,0 +1,91 @@
+@font-face{font-family:"BS98 Cormorant";font-style:normal;font-weight:300 700;font-display:swap;src:url(../../02-content/fonts/bs98-cormorant-garamond-variable.woff2) format("woff2")}
+@font-face{font-family:"BS98 Cormorant";font-style:italic;font-weight:300 700;font-display:swap;src:url(../../02-content/fonts/bs98-cormorant-garamond-italic-variable.woff2) format("woff2")}
+@font-face{font-family:"BS98 Manrope";font-style:normal;font-weight:200 800;font-display:swap;src:url(../../02-content/fonts/bs98-manrope-variable.woff2) format("woff2")}
+html#bs98-tilda{
+    color-scheme:only light;
+    --paper:#f4efe6; --paper-2:#ece4d6;
+    --ink:#1b231d; --ink-soft:#565d53; --ink-dim:#5f665c;
+    --forest:#2c4133; --brass:#8a5e2e; --brass-bright:#b5853f;
+    --brass-deep:#7d5527; 
+    --line:rgba(27,35,29,.16); --line-soft:rgba(27,35,29,.09);
+    --ease:cubic-bezier(.19,1,.22,1);
+  }
+html#bs98-tilda *{box-sizing:border-box;margin:0;padding:0}
+html#bs98-tilda{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html#bs98-tilda{scroll-behavior:auto}
+}
+html#bs98-tilda body{background:var(--paper);color:var(--ink-soft);font-family:"BS98 Manrope",system-ui,sans-serif;line-height:1.72;font-size:16.5px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;min-height:100vh;overflow-x:hidden}
+html#bs98-tilda .wrap{max-width:780px;margin:0 auto;padding:clamp(28px,5vw,44px) clamp(16px,5vw,32px) 96px}
+html#bs98-tilda .top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(40px,7vw,64px);padding-bottom:20px;border-bottom:1px solid var(--line)}
+html#bs98-tilda .brand{font-family:"BS98 Cormorant",serif;font-size:1.18rem;letter-spacing:.01em;text-decoration:none;color:var(--forest);border:0}
+html#bs98-tilda .brand b{color:var(--brass);font-weight:500}
+html#bs98-tilda .back{font-size:.8rem;letter-spacing:.04em;color:var(--ink-soft);text-decoration:none;border:1px solid var(--line);padding:11px 18px;border-radius:999px;transition:color .3s var(--ease),border-color .3s var(--ease);white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+html#bs98-tilda .back:hover{color:var(--brass);border-color:var(--brass)}
+html#bs98-tilda .eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:14px}
+html#bs98-tilda h1{font-family:"BS98 Cormorant",serif;font-weight:300;font-size:clamp(2rem,5.5vw,3rem);letter-spacing:-.015em;line-height:1.05;color:var(--forest);margin-bottom:10px;overflow-wrap:anywhere}
+html#bs98-tilda h2{font-family:"BS98 Cormorant",serif;font-weight:400;font-size:1.34rem;margin:48px 0 12px;color:var(--forest);scroll-margin-top:24px;line-height:1.25}
+html#bs98-tilda h2 .n{font-size:.72rem;letter-spacing:.24em;color:var(--brass);font-family:"BS98 Manrope",system-ui,sans-serif;font-weight:600;display:block;margin-bottom:6px}
+html#bs98-tilda h3{font-family:"BS98 Manrope",system-ui,sans-serif;font-weight:600;font-size:.98rem;color:var(--ink);margin:22px 0 4px}
+html#bs98-tilda .lang-h{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-top:64px;display:block}
+html#bs98-tilda p,html#bs98-tilda li{color:var(--ink-soft)}
+html#bs98-tilda p+p{margin-top:10px}
+html#bs98-tilda ul{margin:8px 0 0 20px}
+html#bs98-tilda li{margin:5px 0}
+html#bs98-tilda li::marker{color:var(--brass)}
+html#bs98-tilda a{color:var(--brass);text-decoration:none;border-bottom:1px solid rgba(138,94,46,.35);transition:color .25s var(--ease),border-color .25s var(--ease);overflow-wrap:anywhere}
+html#bs98-tilda a:hover{color:var(--forest);border-color:var(--forest)}
+html#bs98-tilda .meta{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;margin-top:10px;color:var(--ink-dim);font-size:.86rem}
+html#bs98-tilda .meta a{white-space:nowrap}
+html#bs98-tilda hr{border:0;border-top:1px solid var(--line);margin:56px 0}
+html#bs98-tilda strong{color:var(--ink);font-weight:600}
+html#bs98-tilda em{font-style:italic}
+html#bs98-tilda code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em;background:var(--paper-2);padding:1px 6px;border-radius:5px;color:var(--ink)}
+html#bs98-tilda .sum{background:var(--paper-2);border-radius:14px;padding:22px 24px 20px;margin:30px 0 8px}
+html#bs98-tilda .sum .k{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-deep);font-weight:600;display:block;margin-bottom:8px}
+html#bs98-tilda .sum a{color:var(--brass-deep);border-bottom-color:rgba(125,85,39,.4)}
+html#bs98-tilda .sum a:hover{color:var(--forest);border-color:var(--forest)}
+html#bs98-tilda .sum ul{margin:0;list-style:none}
+html#bs98-tilda .sum li{position:relative;padding-left:22px;margin:7px 0}
+html#bs98-tilda .sum li::before{content:"";position:absolute;left:0;top:.78em;width:10px;height:1px;background:var(--brass)}
+html#bs98-tilda .steps{list-style:none;margin:12px 0 0;counter-reset:step}
+html#bs98-tilda .steps li{position:relative;padding-left:42px;margin:14px 0}
+html#bs98-tilda .steps li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.12em;width:28px;height:28px;border:1px solid var(--brass);border-radius:50%;font-family:"BS98 Cormorant",serif;font-size:.8rem;font-weight:500;color:var(--brass);display:flex;align-items:center;justify-content:center}
+html#bs98-tilda .tbl{width:100%;border-collapse:collapse;margin:14px 0 4px;font-size:.93rem;line-height:1.6}
+html#bs98-tilda .tbl th{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);font-weight:600;text-align:left;padding:0 16px 10px 0;border-bottom:1px solid var(--line);vertical-align:bottom}
+html#bs98-tilda .tbl td{padding:13px 16px 13px 0;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-soft)}
+html#bs98-tilda .tbl td:first-child{color:var(--ink);font-weight:500}
+html#bs98-tilda .tbl th:last-child,html#bs98-tilda .tbl td:last-child{padding-right:0}
+html#bs98-tilda .tbl.c3 th:first-child{width:29%}
+html#bs98-tilda .tbl.c3 th:nth-child(2){width:30%}
+html#bs98-tilda .tbl.c2 th:first-child{width:42%}
+@media (max-width:640px){html#bs98-tilda .tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html#bs98-tilda .tbl,html#bs98-tilda .tbl tbody,html#bs98-tilda .tbl tr,html#bs98-tilda .tbl td{display:block;width:100%}
+html#bs98-tilda .tbl tr{padding:14px 0 12px;border-bottom:1px solid var(--line-soft)}
+html#bs98-tilda .tbl td{padding:0 0 8px;border:0}
+html#bs98-tilda .tbl td:last-child{padding-bottom:0}
+html#bs98-tilda .tbl td:first-child{font-size:1rem;padding-bottom:6px}
+html#bs98-tilda .tbl td[data-l]:not(:first-child)::before{content:attr(data-l);display:block;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:1px}
+
+  }
+html#bs98-tilda .proc{list-style:none;margin:12px 0 0}
+html#bs98-tilda .proc li{padding:16px 0;border-top:1px solid var(--line-soft);margin:0}
+html#bs98-tilda .proc li:last-child{border-bottom:1px solid var(--line-soft)}
+html#bs98-tilda .proc b{display:block;color:var(--ink);font-weight:600;margin-bottom:3px}
+html#bs98-tilda .proc b span{color:var(--ink-dim);font-weight:400;font-size:.88rem}
+html#bs98-tilda .proc small{display:block;color:var(--ink-dim);font-size:.84rem;margin-top:6px}
+html#bs98-tilda .hist{font-size:.86rem;color:var(--ink-dim)}
+html#bs98-tilda .foot{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink-dim);display:flex;flex-wrap:wrap;gap:6px 18px}
+html#bs98-tilda .foot a{white-space:nowrap}
+html#bs98-tilda .brand{line-height:1.2;font-size:1.55rem}
+html#bs98-tilda .brand b{display:block;font-family:"BS98 Manrope",sans-serif;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;margin-top:5px}
+html#bs98-tilda :where(a,button):focus-visible{outline:2px solid var(--forest);outline-offset:4px}
+@media(max-width:380px){html#bs98-tilda .top{gap:10px}
+html#bs98-tilda .back{padding:10px 13px}
+html#bs98-tilda .brand b{font-size:.52rem;letter-spacing:.06em}
+}
+
+
+html#bs98-tilda #allrecords{font:inherit;color:inherit;background:transparent;}
+html#bs98-tilda .bs98-block{width:100%;margin:0;padding:0;}
+html#bs98-tilda #allrecords .t123,html#bs98-tilda #allrecords .t123__centeredContainer,html#bs98-tilda #allrecords .t123__width{max-width:none;width:100%;margin:0;padding:0;}
+html#bs98-tilda .bs98-error{padding:16px;background:#fff3d6;color:#532e00;font:16px/1.5 system-ui;}
